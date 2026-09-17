@@ -1,0 +1,14 @@
+[Unit]
+Description=Resin proxy gateway
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/resin
+EnvironmentFile=/etc/resin.env
+ExecStart=/opt/resin/resin
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
